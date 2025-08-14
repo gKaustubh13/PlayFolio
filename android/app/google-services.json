@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1006790015270",
+    "project_id": "playfolio-5a00c",
+    "storage_bucket": "playfolio-5a00c.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1006790015270:android:794a8a97a5641ae513e9e7",
+        "android_client_info": {
+          "package_name": "com.example.playfolio"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB6DGaJPYrSqUSK6Vo0fpFe7w7zNmi506M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
