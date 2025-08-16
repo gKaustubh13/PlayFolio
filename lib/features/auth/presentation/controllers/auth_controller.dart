@@ -1,3 +1,4 @@
+import 'dart:core';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:playfolio/features/auth/data/repositories/auth_repository.dart';
 
@@ -41,4 +42,11 @@ class AuthController extends StateNotifier<AsyncValue<void>> {
     state = const AsyncLoading();
     state = await AsyncValue.guard(_authRepository.signOut);
   }
+
+  void resetState() {
+    state = const AsyncData(null);
+  }
+
+  bool get isLoading => state.isLoading;
+  Object? get error => state.error;
 }

@@ -1,4 +1,6 @@
+# =========================
 # Miscellaneous
+# =========================
 *.class
 *.log
 *.pyc
@@ -12,7 +14,9 @@
 .swiftpm/
 migrate_working_dir/
 
+# =========================
 # IntelliJ related
+# =========================
 *.iml
 *.ipr
 *.iws
@@ -23,7 +27,9 @@ migrate_working_dir/
 # is commented out by default.
 #.vscode/
 
+# =========================
 # Flutter/Dart/Pub related
+# =========================
 **/doc/api/
 **/ios/Flutter/.last_build_id
 .dart_tool/
@@ -43,3 +49,70 @@ app.*.map.json
 /android/app/debug
 /android/app/profile
 /android/app/release
+
+# =========================
+# Firebase Config (DO NOT COMMIT)
+# =========================
+android/app/google-services.json
+ios/Runner/GoogleService-Info.plist
+
+# =========================
+# Android
+# =========================
+*.jks
+*.keystore
+key.properties
+android/local.properties
+.gradle/
+**/GeneratedPluginRegistrant.java
+
+# =========================
+# iOS
+# =========================
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/Flutter.framework
+ios/Flutter/Flutter.podspec
+ios/Flutter/Generated.xcconfig
+ios/Flutter/ephemeral/
+
+# =========================
+# Xcode
+# =========================
+DerivedData/
+*.xcworkspace
+*.xcuserstate
+*.xcuserdatad/
+*.moved-aside
+*.pbxuser
+*.mode1v3
+*.mode2v3
+
+# =========================
+# macOS
+# =========================
+macos/Flutter/ephemeral/
+macos/Pods/
+
+# =========================
+# Windows
+# =========================
+windows/flutter/ephemeral/
+
+# =========================
+# Linux
+# =========================
+linux/flutter/ephemeral/
+
+# =========================
+# Web
+# =========================
+web/.dart_tool/
+
+# =========================
+# Env Files / Secrets
+# =========================
+.env
+.env.*
+*.credentials.json
+*.secret

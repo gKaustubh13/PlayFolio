@@ -8,7 +8,7 @@ final firebaseAuthProvider = Provider<FirebaseAuth>(
 );
 
 final authRepositoryProvider = Provider<AuthRepository>(
-  (ref) => AuthRepository(ref.watch(firebaseAuthProvider)),
+  (ref) => AuthRepository(firebaseAuth: ref.watch(firebaseAuthProvider)),
 );
 
 final authStateChangesProvider = StreamProvider<User?>(
@@ -19,3 +19,16 @@ final authControllerProvider =
     StateNotifierProvider<AuthController, AsyncValue<void>>(
       (ref) => AuthController(ref.watch(authRepositoryProvider)),
     );
+
+final currentUserProvider = Provider<User?>((ref) {
+  return ref.watch(authStateChangesProvider).value;
+});
+
+final isSignedInProvider = Provider<bool>((ref) {
+  return ref.watch(authStateChangesProvider).value != null;
+});
+
+final isAnonymousProvider = Provider<bool>((ref) {
+  final user = ref.watch(authStateChangesProvider).value;
+  return user?.isAnonymous ?? false;
+});
